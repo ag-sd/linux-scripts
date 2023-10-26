@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install custom scripts
-install_custom_scripts.sh
+../scripts/install_custom_scripts.sh
 source /home/sheldon/.bashrc
 
 # Update Pacman Mirrorlist
@@ -37,19 +37,9 @@ elif grep -E "Intel Corporation UHD" <<< ${gpu_type}; then
     sudo pacman -S --needed --noconfirm libva-intel-driver libvdpau-va-gl lib32-vulkan-intel vulkan-intel libva-intel-driver libva-utils lib32-mesa
 fi
 
-# Mostly needed apps
-sudo pacman -Sy --needed rclone libreoffice-fresh ristretto calibre ffmpegthumbs konsave
-sudo pacman -Sy --needed youtube-dl gallery-dl-bin gnome-disk-utility keepassxc transmission-qt code-oss
-sudo pacman -Sy --needed handbrake handbrake-cli brave-bin
-sudo pacman -Sy --needed nomacs ristretto
-
-# Somewhat needed apps
-sudo pacman -Sy --needed inkscape gimp
-sudo pacman -Sy --needed sqlitebrowser filezilla  avidemux-qt
-sudo pacman -Sy --needed kruler dconf-editor
-
-# Optional applications
-#sudo pacman -Sy --needed jetbrains-toolbox maui-pix amazon-workspaces-bin kdeconnect
+# Install apps
+# Review the list in install_sw_list.txt and comment (#) out software thats not needed
+sudo pacman -S --needed $(cat 2_install_sw_list.txt | grep -v '#')
 
 # List packages
 pacman -Qi | awk '/^Name/{name=$3} /^Installed Size/{print $4$5, name}' | sort -h

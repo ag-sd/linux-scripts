@@ -1,0 +1,33 @@
+# Mostly needed apps
+rclone
+libreoffice-fresh
+ristretto
+maui-pix
+calibre
+ffmpegthumbs
+konsave
+youtube-dl
+gallery-dl-bin
+gnome-disk-utility
+keepassxc
+transmission-qt
+code-oss
+handbrake
+handbrake-cli
+brave-bin
+unrar
+ntfs-3g
+
+# Somewhat needed apps
+inkscape
+gimp
+sqlitebrowser
+filezilla
+avidemux-qt
+kruler
+dconf-editor
+
+# Optional applications
+#jetbrains-toolbox  
+#amazon-workspaces-bin 
+kdeconnect
