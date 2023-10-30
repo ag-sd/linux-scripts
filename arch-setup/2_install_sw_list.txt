@@ -1,22 +1,30 @@
 # Mostly needed apps
+unrar
+ntfs-3g
+neofetch
+neovim
+btop
+tldr
+fzy
 rclone
+ffmpegthumbs
+konsave
+gnome-disk-utility
 libreoffice-fresh
+handbrake
+handbrake-cli
 ristretto
 maui-pix
 calibre
-ffmpegthumbs
-konsave
-youtube-dl
+# youtube-dl is dead :(
+yt-dl
 gallery-dl-bin
-gnome-disk-utility
 keepassxc
 transmission-qt
 code-oss
-handbrake
-handbrake-cli
+
 brave-bin
-unrar
-ntfs-3g
+
 
 # Somewhat needed apps
 inkscape
@@ -30,4 +38,4 @@ dconf-editor
 # Optional applications
 #jetbrains-toolbox  
 #amazon-workspaces-bin 
-kdeconnect
+#kdeconnect

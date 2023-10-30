@@ -26,14 +26,18 @@ Start here: https://wiki.archlinux.org/title/installation_guide and follow the s
 
 # Post Installation Process
 ## Change User Directories
-```sh
-su
-    cd /mnt
-    mkdir downloads documents nas
-    mkdir nas/share nas/.sys
-    chmod +rwx -R *
-exit
+Using `gnome-disk-utility` setup all your drives to automount and mount to the correct locations in the `/mnt` directory. Additionally, setup your NAS and its mount directories if needed. NAS scripts are found in the scripts repository
 
+This is how we want the setup to look.
+```
+Downloads   -> /mnt/downloads/Downloads
+Documents   -> /mnt/documents
+Pictures    -> /mnt/documents/Pictures
+Music (NAS) -> /mnt/nas/...
+```
+
+And this is how to set it up once the mounts points are configured in `gnome-disk-utility`
+```sh
 rm -rf ~/Downloads
 ln -s /mnt/downloads/Downloads ~/Downloads
 
@@ -48,6 +52,8 @@ ln -s /mnt/nas/share/Photos ~/Pictures
 
 rm -rf ~/Public ~/Templates ~/Videos
 ```
+
+
 
 ## Install Software
 First review the software [listed here](2_install_sw_list.txt) and comment out (with a `#`) anything that shouldnt be installed. Then run 
@@ -136,6 +142,20 @@ yay intellij-idea-ce
 /opt/intellij-idea-ce/bin/idea.sh manjaro.mpb
 
 ```
+
+## Convenience Setup
+### Easy Command Line Access
+In startup applications add `konsole` or `xfce-terminal`. This will ensure that the terminal launches on each system startup. To ensure that the terminal is always at hand, install [`jumpapp`](https://github.com/mkropat/jumpapp) and add a system shortcut to bring the terminal to the front.
+
+```sh
+yay jumpapp
+
+Add Shortcut > jumpapp -R -f konsole >> win+R
+```
+
+
+
+
 
 ## Miscellaneous Notes
 ### Using Nemo as the file manager in XFCE
