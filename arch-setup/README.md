@@ -38,6 +38,13 @@ Music (NAS) -> /mnt/nas/...
 
 And this is how to set it up once the mounts points are configured in `gnome-disk-utility`
 ```sh
+su
+    cd /mnt
+    mkdir downloads documents nas
+    mkdir nas/share nas/.sys # NAS script will mount here
+    chmod +rwx -R *
+exit
+
 rm -rf ~/Downloads
 ln -s /mnt/downloads/Downloads ~/Downloads
 
@@ -153,12 +160,18 @@ yay jumpapp
 Add Shortcut > jumpapp -R -f konsole >> win+R
 ```
 
+## iPhone (iOS) Support
+Ensure the following packages are intstalled
+1. `libimobiledevice`. CHeck if its running with the command `systemctl status usbmuxd.service`
+2. To access the media filesystem, install `gvfs-gphoto2`. To access the app document filesystem, install `gvfs-afc`
 
 
 
 
 ## Miscellaneous Notes
 ### Using Nemo as the file manager in XFCE
+
+If you choose to replace Thunar with Nemo, the desktop will not work out of the box. Additonally, Nemo will not call the xfce-terminal by default. Thus, some configuration is needed.
 
 ```sh
 # Install nemo and dconf-editor
@@ -170,6 +183,21 @@ sudo pacman -Sy --needed nemo dconf-editor nemo-desktop
 4. In 'Session and Startup' (xfce4-session-settings), *Application autostart*, add `nemo-desktop`
 
 To integrate with Thunar bulk rename: in Nemo, Edit > Preferences > Behavior > Bulk rename, enter `thunar --bulk-rename`
+
+### Configuring Nemo Appearance
+1. Open a terminal window Ctrl+Alt+t
+2. `cd ~/.config/gtk-3.0/`
+3. `xed gtk.css` (Create one if it doesn't exit)
+4. Add the following code:
+    ```css
+    /*.nemo-places-sidebar .view { */ 
+    .nemo-window .sidebar .view {
+    background-color: @theme_fg_color;
+    color: @theme_bg_color;
+    }
+    ```
+5. Save file and close; Quit/close all nemo windows and Startup a nemo file explorer nemo
+
 
 ### Razer keyboard support
 ```sh

@@ -1,32 +1,49 @@
+##########################
 # Mostly needed apps
+##########################
+# Rar Support
 unrar
+# Support for NTFS drives
 ntfs-3g
+# System Info
 neofetch
+# a better vi experience
 neovim
+# a better top experience
 btop
+# a better man experience
 tldr
 fzy
+# a better bash experience
+fish
+# for managing cloud drives
 rclone
 ffmpegthumbs
+# If you use KDE, konsave can backup all your configurations
 konsave
+# disk maangement
 gnome-disk-utility
+# Office
 libreoffice-fresh
+# Video
 handbrake
 handbrake-cli
-ristretto
-maui-pix
-calibre
 # youtube-dl is dead :(
 yt-dl
+# Images
+ristretto
+maui-pix
 gallery-dl-bin
+# Books
+calibre
+# Password management
 keepassxc
 transmission-qt
 code-oss
-
 brave-bin
-
-
+##########################
 # Somewhat needed apps
+##########################
 inkscape
 gimp
 sqlitebrowser
@@ -34,8 +51,9 @@ filezilla
 avidemux-qt
 kruler
 dconf-editor
-
+##########################
 # Optional applications
+##########################
 #jetbrains-toolbox  
 #amazon-workspaces-bin 
 #kdeconnect
