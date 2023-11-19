@@ -1,0 +1,11 @@
+[Nemo Action]
+# Requires exiftool - yay exiftool
+Active=false
+Name=Image _Properties
+Comment=Open %F with exiftool
+Exec=exiftool %F
+Icon-Name=applications-multimedia-symbolic
+Selection=s
+Mimetypes=image/bmp;image/gif;image/jpeg;image/jpg;image/pjpeg;image/png;image/tiff;image/webp;image/x-bmp;image/x-pcx;image/x-png;image/x-portable-anymap;image/x-portable-bitmap;image/x-portable-graymap;image/x-portable-pixmap;image/x-tga;image/x-xbitmap;
+EscapeSpaces=true
+Dependencies=exiftool;

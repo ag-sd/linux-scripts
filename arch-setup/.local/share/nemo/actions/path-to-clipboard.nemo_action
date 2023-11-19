@@ -1,0 +1,10 @@
+# https://github.com/gcmt/dotfiles/tree/master/nemo/actions
+[Nemo Action]
+Name=Path to Clipboard
+Comment=Copy Path to Clipboard
+Exec=<path-to-clipboard.sh %F>
+Selection=any
+Extensions=any
+Quote=double
+Dependencies=xclip;
+Icon-Name=edit-copy

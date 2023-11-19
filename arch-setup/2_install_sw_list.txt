@@ -41,6 +41,10 @@ keepassxc
 transmission-qt
 code-oss
 brave-bin
+# Multimedia support
+mediainfo-gui-qt
+xclip
+exiftool
 ##########################
 # Somewhat needed apps
 ##########################
