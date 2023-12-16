@@ -41,8 +41,9 @@ keepassxc
 transmission-qt
 code-oss
 brave-bin
+speedtest-cli
+kwin-effect-rounded-corners
 # Multimedia support
-mediainfo-gui-qt
 xclip
 exiftool
 ##########################
